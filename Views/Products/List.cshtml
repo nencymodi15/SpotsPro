@@ -1,0 +1,20 @@
+﻿@model List<Product>
+
+<h2>Products</h2>
+
+<div class="row">
+    @foreach (var product in Model)
+    {
+        <div class="col-md-4 mb-4">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">@product.Name</h5>
+                    <p class="card-text">Product ID: @product.ProductID</p>
+                    <p class="card-text">Product Code: @product.ProductCode</p>
+                    <p class="card-text">Yearly Price: @product.YearlyPrice.ToString("C")</p>
+                    <p class="card-text">Release Date: @product.ReleaseDate.ToShortDateString()</p>
+                </div>
+            </div>
+        </div>
+    }
+</div>

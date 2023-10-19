@@ -1,0 +1,23 @@
+﻿@model List<Incident>
+
+<h2>Incidents</h2>
+
+<div class="row">
+    @foreach (var incident in Model)
+    {
+        <div class="col-md-4 mb-4">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">Incident ID: @incident.IncidentID</h5>
+                    <p class="card-text">Customer: @incident.Customer.FirstName @incident.Customer.LastName</p>
+                    <p class="card-text">Product: @incident.Product.Name</p>
+                    <p class="card-text">Technician: @incident.Technician.Name</p>
+                    <p class="card-text">Title: @incident.Title</p>
+                    <p class="card-text">Description: @incident.Description</p>
+                    <p class="card-text">Date Opened: @incident.DateOpened</p>
+                    <p class="card-text">Date Closed: @incident.DateClosed</p>
+                </div>
+            </div>
+        </div>
+    }
+</div>

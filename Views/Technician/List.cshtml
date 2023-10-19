@@ -1,0 +1,19 @@
+﻿@model List<Technician>
+
+<h2>Technicians</h2>
+
+<div class="row">
+    @foreach (var technician in Model)
+    {
+        <div class="col-md-4 mb-4">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">Technician ID: @technician.TechnicianID</h5>
+                    <p class="card-text">Name: @technician.Name</p>
+                    <p class="card-text">Email: <a href="mailto:@technician.Email">@technician.Email</a></p>
+                    <p class="card-text">Phone: @technician.Phone</p>
+                </div>
+            </div>
+        </div>
+    }
+</div>
